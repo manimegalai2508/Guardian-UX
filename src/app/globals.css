@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'cheeseburga';
+  src: url('../../public/CHEESEBURGA demo.ttf'); 
+}
+@font-face {
+  font-family: 'helvetica';
+  src: url('../../public/helvetica black.otf'); 
+}
+@font-face {
+  font-family: 'helvetica-normal';
+  src: url('../../public/Helvetica.ttf');
+}
+@font-face {
+  font-family: 'baron';
+  src: url('../../public/Baron Kuffner.otf'); 
+}
+
+.font-burga {
+  font-family: 'cheeseburga', sans-serif;
+}
+.font-hel { 
+  font-family: 'helvetica', sans-serif; 
+}
+.font-hel-normal { 
+  font-family: 'helvetica-normal', sans-serif;
+}
+.font-baron {
+  font-family: 'baron', sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.strokeText {
+  -webkit-text-stroke-color: #0F1B29;
+  -webkit-text-stroke-width: 4px;
+}
+.textShadow {
+  filter: drop-shadow(10px 10px #0F1B29);
+}
+.tokenomicsCard {
+  box-shadow: 10px 10px 15px #A87D29;
+}
+.roadmapGrid {
+  mask-image: linear-gradient(180deg, black 40%, transparent 94%);
+}
+
+#HomeSliderGradient {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0px 86.5%);
+  background: #fff280;
+  background: radial-gradient(circle, #fff280 0%, #ffc700 60%);
+}
+#ProjectVisionGradient {
+  background: #fff280;
+  background: radial-gradient(circle at 50% 60%, #fff280 0%, #ffc700 30%);
+}
+#tokenomicsGradient {
+  position: relative;
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
+  background: #fff280;
+  background: radial-gradient(circle at 50% 50%, #fff280 0%, #ffc700 30%);
+}
+#gamesGradient {
+  background: #fff280;
+  background: radial-gradient(circle at 50% 30%, #fff280 0%, #ffc700 30%);
+}
+#tokenomicsGradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: #ffc700;
+}
+
+#mobileFeatureDiv p {
+  position: relative;
+}
+#mobileFeatureDiv p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--primaryClr);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #HomeSliderGradient {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0px 90%);
+    background: radial-gradient(circle at 50% 30%, #fff280 0%, #ffc700 65%);
+  }
+  #tokenomicsGradient {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: white;
+  }
+  #tokenomicsGradient::after {
+    background-color: white;
+  }
+  .tokenomicsCard {
+    box-shadow: 10px 10px 15px #717171;
+  }
+  .roadmapGrid {
+    mask-image: linear-gradient(180deg, black 60%, transparent 90%);
+  }
+  #mobileMerchGradient {
+    background: #fff280;
+    background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 60%);
+  }
+  #mobileSocialGradient {
+    background: #fff280;
+    background: radial-gradient(circle at 50% 65%, #fff280 0%, #ffc700 60%);
+  }
+  #roadMapMobileGradient {
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
+    background: #fff280;
+    background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 40%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .textShadow {
+    filter: drop-shadow(5px 5px #0F1B29);
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  border-radius: 999px;
+  border: 1px solid #f0f0f04d;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #55555581;
+}
